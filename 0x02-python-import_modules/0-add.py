@@ -2,7 +2,6 @@
 
 if __name__ == "__main__":
     from add_0 import add
-    """Print the sum of a and b."""
 
     a = 1
     b = 2
