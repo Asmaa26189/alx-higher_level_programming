@@ -5,8 +5,9 @@ int is_palindrome(listint_t **head);
 
 /**
  * reverse_listint - reverse_listint
- * @head: head
- * Return: listint_t
+ * @head: A pointer to starting node
+ *
+ * Return: A pointer to head of reversed list
  */
 listint_t *reverse_listint(listint_t **head)
 {
@@ -26,8 +27,9 @@ listint_t *reverse_listint(listint_t **head)
 
 /**
  * is_palindrome - is_palindrome
- * @head: head
- * Return: int
+ * @head: A pointer to head of linked list.
+ *
+ * Return: 0 or 1.
  */
 int is_palindrome(listint_t **head)
 {
