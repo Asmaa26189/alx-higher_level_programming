@@ -9,6 +9,7 @@ def roman_to_int(roman_string):
             "D": 500,
             "M": 1000
     }
+    
     intNum = 0
     
     if (not isinstance(roman_string, str) or
