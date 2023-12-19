@@ -1,10 +1,21 @@
 #!/usr/bin/python3
+"""Class Square."""
+
+
 class Square:
+    """Class square."""
+
     def __init__(self, size=0):
+        """Initialize a square instance
+
+        Args:
+            size (int): size
+        """
         self.size = size
 
     @property
     def size(self):
+        """Get/set """
         return (self.__size)
 
     @size.setter
@@ -16,28 +27,29 @@ class Square:
         self.__size = value
 
     def area(self):
+        """Return area"""
         return (self.__size * self.__size)
 
     def __eq__(self, other):
-        # == comparision
+        """Define  == comparision """
         return self.area() == other.area()
 
     def __ne__(self, other):
-        # != comparison
+        """Define  != comparison """
         return self.area() != other.area()
 
     def __lt__(self, other):
-        # < comparison
+        """Define  < comparison """
         return self.area() < other.area()
 
-    def __le__(self, ):
-        # <= comparison
+    def __le__(self, other):
+        """Define  <= comparison """
         return self.area() <= other.area()
 
     def __gt__(self, other):
-        # > comparison
+        """Define  > comparison """
         return self.area() > other.area()
 
     def __ge__(self, other):
-        # >= compmarison
+        """Define  >= compmarison """
         return self.area() >= other.area()
