@@ -68,13 +68,13 @@
 
 ::
 
-    >>> add_integer(float('test'))
+    >>> add_integer(float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
      
 ::
 
-    >>> add_integer(2, float('test'))
+    >>> add_integer(2, float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
