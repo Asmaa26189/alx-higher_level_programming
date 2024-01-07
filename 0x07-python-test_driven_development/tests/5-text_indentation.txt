@@ -1,26 +1,11 @@
 # 5-text_indentation.txt
 
-
-================================
-How to Use 5-text_indentation.py
-================================
-
-This module defines a text-indentation function ``text_indentation(text)``.
-
-Usage
-=====
-
-Text is printed with two new lines after each of the characters ``.``, ``?``,
-and ``:``.
-
 ::
 
     >>> text_indentation = __import__('5-text_indentation').text_indentation
     >>> text_indentation("Hello?")
     Hello?
     <BLANKLINE>
-
-No spaces are printed at the beginning of a line.
 
 ::
 
@@ -31,8 +16,6 @@ No spaces are printed at the beginning of a line.
 ::
 
     >>> text_indentation("          ")
-
-Similarly, no spaces are printed at the end of each printed line.
 
 ::
 
@@ -48,15 +31,10 @@ Similarly, no spaces are printed at the end of each printed line.
     This is messy.
     <BLANKLINE>
 
-New lines are only printed for the characters ``.``, ``?``, and ``:`` -
-text not ending with one of these characters is not ended with a new line.
-
 ::
 
     >>> text_indentation("No ending period, what bad grammar")
     No ending period, what bad grammar
-
-New lines within a string are printed as normal.
 
 ::
 
@@ -81,8 +59,6 @@ New lines within a string are printed as normal.
     A sneaky 
     new line.
     <BLANKLINE>
-
-A combo example:
 
 ::
 
@@ -124,11 +100,6 @@ A combo example:
     Quae animi affectio suum cuique tribuens atque hanc, quam dico.
     <BLANKLINE>
     Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
-
-Invalid Text
-============
-
-The paramter ``text`` must be a string. Otherwise, a TypeError is raised.
 
 ::
 
