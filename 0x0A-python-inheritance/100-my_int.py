@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-# 100-my_int.py
-
-"""Defines a class MyInt that inherits from int."""
+"""MyInt"""
 
 
 class MyInt(int):
-    """Invert int operators == and !=."""
+    """MyInt"""
 
     def __eq__(self, value):
         """Override == opeartor with != behavior."""
