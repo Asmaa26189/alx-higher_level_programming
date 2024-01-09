@@ -1,19 +1,26 @@
 #!/usr/bin/python3
-"""Student"""
+""" My class module"""
 
 
-class Student:
-    """Student"""
+class MyClass:
+    """ My class"""
 
-    def __init__(self, first_name, last_name, age):
-        """__init__"""
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
+    def __init__(self, name):
+        self.name = name
+        self.number = 0
 
-    def to_json(self, attrs=None):
-        """to_json"""
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
-        return self.__dict__
+    def __str__(self):
+        return "[MyClass] {} - {:d}".format(self.name, self.number)
+#!/usr/bin/python3
+""" My class module"""
+
+
+class MyClass:
+    """ My class"""
+
+    def __init__(self, name):
+        self.name = name
+        self.number = 0
+
+    def __str__(self):
+        return "[MyClass] {} - {:d}".format(self.name, self.number)
