@@ -1,20 +1,24 @@
 #!/usr/bin/python3
-"""Base"""
+"""base"""
 import json
 import csv
 import turtle
 
 
 class Base:
-    """Base"""
+    """Base
+
+    Attributes:
+        __nb_objects (int): int
+    """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
         """__init__
 
-            Args:
-            id (int): id
+        Args:
+            id (int): int
         """
         if id is not None:
             self.id = id
@@ -26,7 +30,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """to_json_string
 
-            Args:
+        Args:
             list_dictionaries (list): list
         """
         if list_dictionaries is None or list_dictionaries == []:
@@ -37,8 +41,8 @@ class Base:
     def save_to_file(cls, list_objs):
         """save_to_file
 
-           Args:
-           list_objs (list): list
+        Args:
+            list_objs (list): list
         """
         filename = cls.__name__ + ".json"
         with open(filename, "w") as jsonfile:
@@ -52,8 +56,10 @@ class Base:
     def from_json_string(json_string):
         """from_json_string
 
-           Args:
-           json_string (str): str
+        Args:
+            json_string (str): str
+        Returns:
+            list
         """
         if json_string is None or json_string == "[]":
             return []
@@ -63,8 +69,8 @@ class Base:
     def create(cls, **dictionary):
         """create
 
-           Args:
-           dictionary (dictionary): dictionary
+        Args:
+            **dictionary (dict): dict
         """
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
@@ -78,8 +84,8 @@ class Base:
     def load_from_file(cls):
         """load_from_file
 
-           Args:
-           dictionary (dictionary): dictionary
+        Returns:
+            list.
         """
         filename = str(cls.__name__) + ".json"
         try:
@@ -93,8 +99,8 @@ class Base:
     def save_to_file_csv(cls, list_objs):
         """save_to_file_csv
 
-           Args:
-           list_objs (list): list
+        Args:
+            list_objs (list): list
         """
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as csvfile:
@@ -113,8 +119,8 @@ class Base:
     def load_from_file_csv(cls):
         """load_from_file_csv
 
-           Args:
-           cls (class): class
+        Returns:
+            list
         """
         filename = cls.__name__ + ".csv"
         try:
@@ -134,9 +140,9 @@ class Base:
     def draw(list_rectangles, list_squares):
         """draw
 
-           Args:
-           list_rectangles (list): list
-           list_squares (list): list
+        Args:
+            list_rectangles (list): list
+            list_squares (list): list
         """
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
