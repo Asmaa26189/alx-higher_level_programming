@@ -1,13 +1,24 @@
 #!/usr/bin/python3
-"""Rectangle."""
+"""Defines a Rectangle model class."""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle"""
+    """Rectangle model.
+
+    Represents "Rectangle".
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """__init__"""
+        """Initialize a Base.
+
+        Args:
+            width (int): width.
+            height (int): height.
+            x (int): x.
+            y (int): y.
+            id (int): id.
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -16,7 +27,11 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width"""
+        """width.
+
+        Returns:
+            width.
+        """
         return self.__width
 
     @width.setter
@@ -29,11 +44,20 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """height"""
+        """__height.
+
+        Returns:
+            height.
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """height.
+
+        Returns:
+            height.
+        """
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -42,7 +66,11 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """x"""
+        """x.
+
+        Returns:
+            x.
+        """
         return self.__x
 
     @x.setter
@@ -55,7 +83,11 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """y"""
+        """y.
+
+        Returns:
+            y.
+        """
         return self.__y
 
     @y.setter
@@ -67,11 +99,19 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """area"""
+        """area.
+
+        Returns:
+            area.
+        """
         return self.width * self.height
 
     def display(self):
-        """display."""
+        """display.
+
+        Returns:
+            empty.
+        """
         if self.width == 0 or self.height == 0:
             print("")
             return
@@ -83,7 +123,12 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args, **kwargs):
-        """Update"""
+        """Update.
+
+        Returns:
+            empty.
+        """
+
         if args and len(args) != 0:
             a = 0
             for arg in args:
@@ -119,7 +164,11 @@ class Rectangle(Base):
                     self.y = v
 
     def to_dictionary(self):
-        """to_dictionary"""
+        """to_dictionary.
+
+        Returns:
+            empty.
+        """
         return {
             "id": self.id,
             "width": self.width,
@@ -129,7 +178,11 @@ class Rectangle(Base):
         }
 
     def __str__(self):
-        """__str__"""
+        """__str__.
+
+        Returns:
+            empty.
+        """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
                                                        self.width, self.height)
