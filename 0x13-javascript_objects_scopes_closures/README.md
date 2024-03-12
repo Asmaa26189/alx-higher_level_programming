@@ -1,1 +1,1 @@
-Javascript - Objects, Scopes and Closures
+JavaScript - Objects, Scopes and Closures
