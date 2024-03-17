@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS states (
   name VARCHAR(256) NOT NULL,
   PRIMARY KEY (id)
 );
-DELETE FROM states
+DELETE FROM states;
 INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
