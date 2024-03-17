@@ -11,4 +11,10 @@ if __name__ == "__main__":
                          passwd=argv[2], db=argv[3], charset="utf8")
     c = db.cursor()
     c.execute("SELECT * FROM `states` ORDER BY `id`")
-    [print(state) for state in c.fetchall() if state[1][0] == "N"]
+    rows = c.fetchall()
+    for row in rows:
+        if row[1][0] == "N":
+            print(row)
+
+    db.close()
+    c.close()
