@@ -11,7 +11,7 @@ request(url, function (err, data, body) {
     for (let i = 0; i < list.length; i++) {
       const chs = list[i].characters;
       for (let j = 0; j < chs.length; j++) {
-        if (chs[j] === 'https://swapi-api.hbtn.io/api/people/18/' || chs[j] === 'http://swapi-api.hbtn.io/api/people/18/') {
+        if (chs[j] === 'https://swapi-api.alx-tools.com/api/films/18/' || chs[j] === 'https://swapi-api.alx-tools.com/api/films/18/') {
             count += 1;
         }
       }
